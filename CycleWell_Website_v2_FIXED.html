@@ -1,0 +1,1918 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- ═══ SECURITY HEADERS ═══ -->
+<meta http-equiv="X-Frame-Options" content="DENY">
+<meta http-equiv="X-Content-Type-Options" content="nosniff">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta http-equiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=()">
+
+<!-- ═══ SEO ═══ -->
+<meta name="description" content="CycleWell — India's holistic PCOS wellness platform. Nutrition, fitness, mental wellness, and doctor connect — all in one place. Chennai-based, pan-India reach.">
+<meta name="keywords" content="PCOS wellness India, PCOS support Chennai, PCOS nutrition Tamil Nadu, hormonal health India, CycleWell">
+<meta name="robots" content="index, follow">
+<meta property="og:title" content="CycleWell — Reclaim. Rebalance. Rise.">
+<meta property="og:description" content="India's first holistic PCOS wellness platform. Nutrition, fitness, mental wellness & doctor connect.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="/og-image.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<title>CycleWell — Reclaim. Rebalance. Rise.</title>
+
+<!-- ═══ FONTS with font-display:swap to prevent CLS ═══ -->
+<link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=Jost:wght@300;400;500;600&display=swap">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+/* ═══════════════════════════════
+   RESET & VARIABLES
+═══════════════════════════════ */
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+:root {
+  --plum:     #5B2D8E;
+  --plum-d:   #3D1A6E;
+  --plum-dd:  #2C1654;
+  --rose:     #C94070;
+  --rose-l:   #E8739A;
+  --sage:     #6B9E7A;
+  --sage-l:   #9DC4A8;
+  --gold:     #D4963A;
+  --cream:    #FBF6F0;
+  --blush:    #F7EDF3;
+  --ink:      #1A0B30;
+  --ink-l:    #3D2B5A;
+  --muted:    #6B5A80;
+  --border:   rgba(91,45,142,0.12);
+  --shadow-sm: 0 2px 16px rgba(91,45,142,0.08);
+  --shadow-md: 0 8px 40px rgba(91,45,142,0.14);
+  --shadow-lg: 0 20px 80px rgba(91,45,142,0.18);
+  --r-sm: 10px;
+  --r-md: 18px;
+  --r-lg: 28px;
+  --r-xl: 50px;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Jost', sans-serif;
+  background: var(--cream);
+  color: var(--ink);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* ═══ SKIP NAV (Accessibility) ═══ */
+.skip-nav {
+  position: absolute;
+  top: -100px;
+  left: 16px;
+  background: var(--plum);
+  color: white;
+  padding: 10px 20px;
+  border-radius: var(--r-sm);
+  font-weight: 600;
+  font-size: 14px;
+  z-index: 9999;
+  text-decoration: none;
+  transition: top 0.2s;
+}
+.skip-nav:focus { top: 16px; }
+
+/* ═══ FOCUS VISIBLE (Accessibility) ═══ */
+*:focus-visible {
+  outline: 3px solid var(--rose);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+*:focus:not(:focus-visible) { outline: none; }
+
+/* ═══════════════════════════════
+   TYPOGRAPHY
+═══════════════════════════════ */
+h1, h2, h3, h4 {
+  font-family: 'Cormorant Garamond', serif;
+  line-height: 1.15;
+  font-weight: 600;
+}
+h1 { font-size: clamp(46px, 7.5vw, 84px); }
+h2 { font-size: clamp(34px, 4.5vw, 56px); }
+h3 { font-size: clamp(21px, 2.8vw, 29px); }
+h4 { font-size: 19px; }
+
+.serif { font-family: 'Cormorant Garamond', serif; }
+.label {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: var(--rose);
+}
+
+/* ═══════════════════════════════
+   UTILITIES
+═══════════════════════════════ */
+.container { max-width: 1160px; margin: 0 auto; padding: 0 32px; }
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 15px 32px;
+  border-radius: var(--r-xl);
+  font-family: 'Jost', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  text-decoration: none;
+  border: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+.btn:active { transform: scale(0.97) !important; }
+
+.btn-primary { background: var(--plum); color: white; box-shadow: 0 4px 20px rgba(91,45,142,0.35); }
+.btn-primary:hover { background: var(--plum-d); transform: translateY(-2px); box-shadow: 0 8px 30px rgba(91,45,142,0.45); }
+
+.btn-outline { background: transparent; color: var(--plum); border: 1.5px solid var(--plum); }
+.btn-outline:hover { background: var(--plum); color: white; transform: translateY(-2px); }
+
+.btn-rose { background: var(--rose); color: white; box-shadow: 0 4px 20px rgba(201,64,112,0.35); }
+.btn-rose:hover { background: #a83360; transform: translateY(-2px); box-shadow: 0 8px 30px rgba(201,64,112,0.45); }
+
+.btn-white { background: white; color: var(--plum); box-shadow: 0 4px 20px rgba(0,0,0,0.12); }
+.btn-white:hover { transform: translateY(-2px); box-shadow: 0 8px 30px rgba(0,0,0,0.18); }
+
+/* ═══════════════════════════════
+   NAVBAR — FIX: logo/links visible on dark hero
+═══════════════════════════════ */
+#navbar {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 1000;
+  transition: all 0.4s ease;
+}
+#navbar.scrolled {
+  background: rgba(251,246,240,0.96);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  box-shadow: 0 2px 30px rgba(91,45,142,0.1);
+}
+.nav-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 72px;
+  padding: 0 40px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+.nav-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+}
+.nav-logo-mark {
+  width: 36px; height: 36px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--plum), var(--rose));
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+}
+.nav-logo-mark svg { width: 18px; height: 18px; fill: white; }
+/* FIX: always white on dark hero, transitions to dark on scroll */
+.nav-logo-text {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 24px;
+  font-weight: 700;
+  color: white;
+  transition: color 0.4s;
+}
+#navbar.scrolled .nav-logo-text { color: var(--plum-dd); }
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  list-style: none;
+}
+/* FIX: white links on dark hero, dark on scroll */
+.nav-links a {
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+  color: rgba(255,255,255,0.85);
+  transition: color 0.2s;
+}
+#navbar.scrolled .nav-links a { color: var(--ink-l); }
+.nav-links a:hover { color: white; }
+#navbar.scrolled .nav-links a:hover { color: var(--plum); }
+
+.nav-cta { display: flex; align-items: center; gap: 12px; }
+.nav-btn-ghost {
+  padding: 10px 22px;
+  border-radius: var(--r-xl);
+  font-size: 13px;
+  font-weight: 600;
+  color: white;
+  border: 1.5px solid rgba(255,255,255,0.5);
+  background: transparent;
+  text-decoration: none;
+  transition: all 0.3s;
+  display: inline-flex; align-items: center;
+}
+#navbar.scrolled .nav-btn-ghost { color: var(--plum); border-color: var(--plum); }
+.nav-btn-ghost:hover { background: rgba(255,255,255,0.15); }
+#navbar.scrolled .nav-btn-ghost:hover { background: var(--plum); color: white; }
+.nav-btn-solid {
+  padding: 10px 22px;
+  font-size: 13px;
+  background: var(--rose);
+  color: white;
+  border-radius: var(--r-xl);
+  font-weight: 600;
+  text-decoration: none;
+  display: inline-flex; align-items: center;
+  transition: all 0.3s;
+  border: none;
+}
+.nav-btn-solid:hover { background: #a83360; transform: translateY(-1px); }
+
+/* Hamburger */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  padding: 8px;
+  background: none;
+  border: none;
+  border-radius: 6px;
+}
+.hamburger span {
+  width: 24px; height: 2px;
+  background: white;
+  border-radius: 2px;
+  transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  display: block;
+}
+#navbar.scrolled .hamburger span { background: var(--plum); }
+.hamburger[aria-expanded="true"] span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.hamburger[aria-expanded="true"] span:nth-child(2) { opacity: 0; transform: scaleX(0); }
+.hamburger[aria-expanded="true"] span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+/* Mobile menu */
+.mobile-menu {
+  position: fixed;
+  top: 72px; left: 0; right: 0;
+  background: white;
+  padding: 0 40px;
+  box-shadow: var(--shadow-md);
+  z-index: 998;
+  flex-direction: column;
+  gap: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1), padding 0.3s;
+  display: flex;
+}
+.mobile-menu.open { max-height: 600px; padding: 16px 40px 24px; }
+.mobile-menu a {
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--ink);
+  padding: 14px 0;
+  border-bottom: 1px solid var(--border);
+  display: block;
+  transition: color 0.2s;
+}
+.mobile-menu a:hover { color: var(--plum); }
+.mobile-menu a:last-of-type { border-bottom: none; }
+.mobile-menu .mobile-cta {
+  margin-top: 16px;
+  border-bottom: none;
+  padding: 0;
+}
+
+/* Overlay for clicking outside */
+#menu-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 997;
+  background: rgba(0,0,0,0.4);
+  -webkit-backdrop-filter: blur(2px);
+  backdrop-filter: blur(2px);
+}
+#menu-overlay.visible { display: block; }
+
+/* ═══════════════════════════════
+   HERO
+═══════════════════════════════ */
+#hero {
+  min-height: 100vh;
+  background: var(--plum-dd);
+  position: relative;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+.hero-blob {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  will-change: transform;
+  pointer-events: none;
+}
+.blob-1 { width: 600px; height: 600px; background: var(--plum); opacity: 0.5; top: -150px; right: -100px; }
+.blob-2 { width: 400px; height: 400px; background: var(--rose); opacity: 0.3; bottom: -100px; left: 10%; }
+.blob-3 { width: 300px; height: 300px; background: var(--sage); opacity: 0.15; top: 30%; right: 30%; }
+.hero-texture {
+  position: absolute; inset: 0;
+  background-image:
+    radial-gradient(circle at 20% 50%, rgba(91,45,142,0.4) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(201,64,112,0.3) 0%, transparent 40%);
+  pointer-events: none;
+}
+.hero-inner {
+  position: relative; z-index: 2;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+  min-height: 100vh;
+  padding: 100px 40px 80px;
+  max-width: 1400px;
+  margin: 0 auto;
+  width: 100%;
+}
+.hero-label {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: rgba(255,255,255,0.1);
+  border: 1px solid rgba(255,255,255,0.2);
+  border-radius: 50px; padding: 8px 18px;
+  font-size: 12px; font-weight: 600; letter-spacing: 1.5px;
+  text-transform: uppercase; color: rgba(255,255,255,0.9);
+  margin-bottom: 28px;
+}
+.hero-label-dot {
+  width: 6px; height: 6px; border-radius: 50%;
+  background: var(--rose-l);
+  animation: pulse-dot 2s infinite;
+}
+@keyframes pulse-dot {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.5; transform: scale(1.4); }
+}
+.hero-title { color: white; margin-bottom: 24px; font-weight: 300; letter-spacing: -1px; }
+.hero-title em { font-style: italic; color: var(--rose-l); }
+/* FIX: WCAG AA contrast — raised opacity for readability */
+.hero-sub {
+  font-size: 17px; color: rgba(255,255,255,0.82);
+  line-height: 1.8; margin-bottom: 40px;
+  max-width: 520px; font-weight: 300;
+}
+.hero-cta { display: flex; gap: 14px; flex-wrap: wrap; margin-bottom: 56px; }
+.hero-stats {
+  display: flex; gap: 32px; flex-wrap: wrap;
+  padding-top: 32px;
+  border-top: 1px solid rgba(255,255,255,0.1);
+  row-gap: 20px; /* FIX: mobile wrapping gap */
+}
+.hero-stat-divider { width: 1px; background: rgba(255,255,255,0.12); align-self: stretch; }
+.hero-stat-num {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 36px; font-weight: 700; color: white; line-height: 1;
+}
+.hero-stat-label {
+  font-size: 12px; color: rgba(255,255,255,0.6);
+  margin-top: 4px; font-weight: 400;
+}
+.hero-visual {
+  display: flex; justify-content: center; align-items: center;
+  position: relative;
+  min-height: 420px; /* FIX: give parent height so pills don't overflow document */
+}
+.hero-card-main {
+  background: rgba(255,255,255,0.08);
+  -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255,255,255,0.15);
+  border-radius: var(--r-lg); padding: 36px;
+  width: 100%; max-width: 400px;
+  animation: floatCard 6s ease-in-out infinite;
+  position: relative; z-index: 1;
+}
+@keyframes floatCard {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-12px); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .hero-card-main, .hero-pill { animation: none !important; }
+}
+.hero-card-avatar {
+  width: 56px; height: 56px; border-radius: 50%;
+  background: linear-gradient(135deg, var(--rose), var(--plum));
+  display: flex; align-items: center; justify-content: center;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 22px; font-weight: 700; color: white; margin-bottom: 16px;
+}
+.hero-card-quote {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 20px; font-style: italic; color: white;
+  line-height: 1.5; margin-bottom: 16px;
+}
+.hero-card-name { font-size: 13px; color: rgba(255,255,255,0.65); }
+.hero-card-name strong { color: rgba(255,255,255,0.9); font-weight: 500; }
+.hero-pill {
+  position: absolute;
+  background: rgba(255,255,255,0.1);
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255,255,255,0.15);
+  border-radius: 50px; padding: 10px 18px;
+  display: flex; align-items: center; gap: 10px;
+  font-size: 13px; color: white; font-weight: 500; white-space: nowrap;
+  z-index: 2;
+}
+.hero-pill-icon {
+  width: 30px; height: 30px; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center; font-size: 14px;
+}
+.pill-1 { top: 30px; right: -20px; animation: floatCard 5s ease-in-out infinite 1s; }
+.pill-2 { bottom: 30px; left: -20px; animation: floatCard 7s ease-in-out infinite 0.5s; }
+
+/* ═══════════════════════════════
+   TRUST BAR
+═══════════════════════════════ */
+#trust { background: white; padding: 28px 0; border-bottom: 1px solid var(--border); }
+.trust-inner {
+  display: flex; align-items: center; justify-content: center;
+  gap: 32px; flex-wrap: wrap; row-gap: 16px; /* FIX: mobile row-gap */
+}
+.trust-item {
+  display: flex; align-items: center; gap: 10px;
+  font-size: 13px; color: var(--muted); font-weight: 500;
+}
+.trust-icon {
+  width: 28px; height: 28px; border-radius: 50%;
+  background: var(--blush);
+  display: flex; align-items: center; justify-content: center; font-size: 13px;
+  flex-shrink: 0;
+}
+.trust-divider { width: 1px; height: 28px; background: var(--border); flex-shrink: 0; }
+@media (max-width: 640px) { .trust-divider { display: none; } }
+
+/* ═══════════════════════════════
+   ABOUT
+═══════════════════════════════ */
+#about { padding: 120px 0; background: var(--cream); }
+.about-grid {
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: 80px; align-items: center;
+}
+.about-visual { position: relative; }
+.about-card-stack {
+  position: relative;
+  height: 480px;
+  min-height: 320px; /* FIX: prevent overflow at large text */
+}
+.stat-card {
+  position: absolute; background: white;
+  border-radius: var(--r-md); padding: 24px;
+  box-shadow: var(--shadow-md); transition: transform 0.3s;
+}
+.stat-card:hover { transform: scale(1.02); }
+.sc-1 { top: 0; left: 0; width: 230px; }
+.sc-2 { top: 100px; right: 0; width: 250px; }
+.sc-3 { bottom: 70px; left: 20px; width: 210px; }
+.sc-4 { bottom: 0; right: 10px; width: 195px; background: var(--plum); }
+.stat-num {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 48px; font-weight: 700; color: var(--plum); line-height: 1; margin-bottom: 6px;
+}
+.sc-4 .stat-num { color: white; }
+.stat-desc { font-size: 13px; color: var(--muted); line-height: 1.5; }
+.sc-4 .stat-desc { color: rgba(255,255,255,0.75); }
+.stat-tag {
+  display: inline-block; font-size: 10px; font-weight: 600;
+  letter-spacing: 1.5px; text-transform: uppercase;
+  padding: 4px 10px; border-radius: 20px; margin-bottom: 12px;
+}
+.tag-rose { background: #FCE8F0; color: #9E2050; }
+.tag-plum { background: #EDE5F6; color: #3D1A6E; }
+.tag-sage { background: #E8F4EC; color: #2D5C37; }
+.tag-white { background: rgba(255,255,255,0.2); color: white; }
+
+.about-content .label { margin-bottom: 16px; display: block; }
+.about-content h2 { color: var(--plum-dd); margin-bottom: 24px; }
+.about-lead { font-size: 17px; color: var(--ink-l); line-height: 1.9; margin-bottom: 36px; font-weight: 300; }
+.about-points { display: flex; flex-direction: column; gap: 16px; margin-bottom: 40px; }
+.about-point { display: flex; gap: 16px; align-items: flex-start; }
+.point-icon {
+  width: 40px; height: 40px; border-radius: 12px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 18px; flex-shrink: 0; margin-top: 2px;
+}
+.point-title { font-weight: 600; font-size: 15px; color: var(--ink); margin-bottom: 4px; }
+.point-desc { font-size: 14px; color: var(--muted); line-height: 1.6; }
+
+/* ═══════════════════════════════
+   SERVICES
+═══════════════════════════════ */
+#services {
+  padding: 120px 0; background: var(--plum-dd);
+  position: relative; overflow: hidden;
+}
+#services::before {
+  content: ''; position: absolute;
+  top: -200px; right: -200px; width: 600px; height: 600px;
+  border-radius: 50%; background: rgba(201,64,112,0.15); filter: blur(60px);
+  pointer-events: none;
+}
+.services-header { text-align: center; margin-bottom: 72px; position: relative; z-index: 1; }
+.services-header .label { margin-bottom: 16px; display: block; color: var(--rose-l); }
+.services-header h2 { color: white; margin-bottom: 16px; }
+.services-header p { color: rgba(255,255,255,0.65); max-width: 520px; margin: 0 auto; font-size: 16px; font-weight: 300; }
+
+.services-grid {
+  display: grid; grid-template-columns: repeat(4, 1fr);
+  gap: 20px; position: relative; z-index: 1;
+}
+.service-card {
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: var(--r-md); padding: 36px 28px;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative; overflow: hidden;
+}
+.service-card::before {
+  content: ''; position: absolute;
+  bottom: 0; left: 0; right: 0; height: 3px;
+  border-radius: 0 0 var(--r-md) var(--r-md);
+  transition: opacity 0.3s; opacity: 0;
+}
+.sc-medical::before { background: linear-gradient(90deg, var(--plum), var(--rose)); }
+.sc-nutrition::before { background: linear-gradient(90deg, var(--sage), #B2DFC0); }
+.sc-mental::before { background: linear-gradient(90deg, #7B68EE, var(--plum)); }
+.sc-fitness::before { background: linear-gradient(90deg, var(--gold), #F5C96A); }
+.service-card:hover {
+  background: rgba(255,255,255,0.09);
+  transform: translateY(-6px);
+  box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+}
+.service-card:hover::before { opacity: 1; }
+.service-icon-wrap {
+  width: 60px; height: 60px; border-radius: 16px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 26px; margin-bottom: 24px;
+}
+.si-medical { background: rgba(201,64,112,0.2); }
+.si-nutrition { background: rgba(107,158,122,0.2); }
+.si-mental { background: rgba(123,104,238,0.2); }
+.si-fitness { background: rgba(212,150,58,0.2); }
+.service-card h3 { color: white; font-size: 22px; margin-bottom: 12px; }
+.service-card p { color: rgba(255,255,255,0.6); font-size: 14px; line-height: 1.8; margin-bottom: 24px; font-weight: 300; }
+.service-features { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+.service-features li {
+  display: flex; align-items: center; gap: 10px;
+  font-size: 13px; color: rgba(255,255,255,0.75);
+}
+.sf-dot { width: 6px; height: 6px; border-radius: 50%; flex-shrink: 0; }
+.dot-rose { background: var(--rose-l); }
+.dot-sage { background: var(--sage-l); }
+.dot-purple { background: #A09BEE; }
+.dot-gold { background: #F5C96A; }
+
+/* ═══════════════════════════════
+   HOW IT WORKS
+═══════════════════════════════ */
+#how { padding: 120px 0; background: var(--blush); }
+.how-header { text-align: center; margin-bottom: 72px; }
+.how-header .label { margin-bottom: 16px; display: block; }
+.how-header h2 { color: var(--plum-dd); margin-bottom: 16px; }
+.how-header p { color: var(--muted); max-width: 480px; margin: 0 auto; font-size: 16px; font-weight: 300; }
+
+.how-steps {
+  display: grid; grid-template-columns: repeat(4, 1fr);
+  gap: 0; position: relative;
+}
+/* FIX: connector line now correctly centered between circle midpoints */
+.how-steps::before {
+  content: ''; position: absolute;
+  top: 44px;
+  left: calc(12.5% + 44px);   /* 12.5% = center of col, +44px = half circle (88/2) */
+  right: calc(12.5% + 44px);
+  height: 2px;
+  background: linear-gradient(90deg, var(--plum), var(--rose), var(--sage), var(--gold));
+  z-index: 0;
+}
+.how-step {
+  display: flex; flex-direction: column;
+  align-items: center; text-align: center;
+  padding: 0 20px; position: relative; z-index: 1;
+}
+.step-num {
+  width: 88px; height: 88px; border-radius: 50%;
+  background: white; box-shadow: var(--shadow-md);
+  display: flex; align-items: center; justify-content: center;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 36px; font-weight: 700; color: var(--plum);
+  margin-bottom: 28px; position: relative; transition: all 0.3s;
+}
+.how-step:hover .step-num { background: var(--plum); color: white; transform: scale(1.1); }
+/* FIX: emoji badge as a span instead of pseudo-element for reliable cross-browser positioning */
+.step-badge {
+  position: absolute;
+  top: -6px; right: -6px;
+  width: 28px; height: 28px; border-radius: 50%;
+  background: white; box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  display: flex; align-items: center; justify-content: center; font-size: 13px;
+}
+.how-step h4 { color: var(--plum-dd); margin-bottom: 10px; font-size: 18px; }
+.how-step p { font-size: 13px; color: var(--muted); line-height: 1.7; }
+
+/* ═══════════════════════════════
+   PRICING — FIX: align-items:stretch so cards equal height
+═══════════════════════════════ */
+#pricing { padding: 120px 0; background: var(--cream); }
+.pricing-header { text-align: center; margin-bottom: 72px; }
+.pricing-header .label { margin-bottom: 16px; display: block; }
+.pricing-header h2 { color: var(--plum-dd); margin-bottom: 16px; }
+.pricing-header p { color: var(--muted); max-width: 480px; margin: 0 auto; font-size: 16px; font-weight: 300; }
+
+.pricing-grid {
+  display: grid; grid-template-columns: repeat(3, 1fr);
+  gap: 28px; align-items: stretch; /* FIX: was 'start', cards now equal height */
+}
+.price-card {
+  background: white; border-radius: var(--r-md);
+  padding: 44px 36px;
+  border: 1.5px solid var(--border);
+  box-shadow: var(--shadow-sm);
+  transition: all 0.3s; position: relative;
+  display: flex; flex-direction: column; /* FIX: flex col so CTA pins to bottom */
+}
+.price-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-lg); }
+.price-card.featured {
+  background: var(--plum-dd); border-color: var(--plum);
+  box-shadow: var(--shadow-lg);
+  /* FIX: removed scale(1.04) — use margin instead so grid rows stay consistent */
+  margin: -12px 0;
+  padding: 56px 36px;
+}
+.price-card.featured:hover { transform: translateY(-6px); }
+.featured-badge {
+  position: absolute; top: -14px; left: 50%; transform: translateX(-50%);
+  background: linear-gradient(90deg, var(--rose), var(--plum));
+  color: white; padding: 6px 20px; border-radius: 50px;
+  font-size: 11px; font-weight: 700; letter-spacing: 1px;
+  text-transform: uppercase; white-space: nowrap;
+}
+.price-plan { font-size: 12px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--muted); margin-bottom: 16px; }
+.price-card.featured .price-plan { color: rgba(255,255,255,0.55); }
+.price-amount { display: flex; align-items: baseline; gap: 4px; margin-bottom: 8px; }
+.price-sym { font-family: 'Cormorant Garamond', serif; font-size: 28px; font-weight: 700; color: var(--plum); }
+.price-card.featured .price-sym { color: var(--rose-l); }
+.price-num { font-family: 'Cormorant Garamond', serif; font-size: 64px; font-weight: 700; color: var(--plum-dd); line-height: 1; }
+.price-card.featured .price-num { color: white; }
+.price-period { font-size: 14px; color: var(--muted); font-weight: 400; }
+.price-card.featured .price-period { color: rgba(255,255,255,0.5); }
+.price-desc {
+  font-size: 14px; color: var(--muted); line-height: 1.6;
+  margin: 12px 0 24px; padding-bottom: 24px;
+  border-bottom: 1px solid var(--border);
+}
+.price-card.featured .price-desc { color: rgba(255,255,255,0.6); border-bottom-color: rgba(255,255,255,0.1); }
+.price-features { list-style: none; display: flex; flex-direction: column; gap: 14px; margin-bottom: 36px; flex: 1; }
+.price-features li { display: flex; align-items: flex-start; gap: 12px; font-size: 14px; color: var(--ink-l); }
+.price-card.featured .price-features li { color: rgba(255,255,255,0.85); }
+.pf-check {
+  width: 18px; height: 18px; border-radius: 50%;
+  background: #EDE5F6; display: flex; align-items: center; justify-content: center;
+  font-size: 10px; flex-shrink: 0; margin-top: 2px; color: var(--plum); font-weight: 700;
+}
+.price-card.featured .pf-check { background: rgba(201,64,112,0.3); color: white; }
+.price-note { text-align: center; margin-top: 40px; font-size: 13px; color: var(--muted); }
+.price-note a { color: var(--plum); text-decoration: none; font-weight: 600; }
+
+/* ═══════════════════════════════
+   TESTIMONIALS
+═══════════════════════════════ */
+#testimonials { padding: 120px 0; background: white; }
+.test-header { text-align: center; margin-bottom: 72px; }
+.test-header .label { margin-bottom: 16px; display: block; }
+.test-header h2 { color: var(--plum-dd); margin-bottom: 16px; }
+.test-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; align-items: start; }
+.test-card {
+  background: var(--cream); border-radius: var(--r-md);
+  padding: 36px; border: 1px solid var(--border);
+  transition: all 0.3s; display: flex; flex-direction: column;
+}
+.test-card:hover { box-shadow: var(--shadow-md); transform: translateY(-4px); }
+.test-card.featured-test {
+  background: var(--plum); border-color: var(--plum);
+}
+.test-stars { color: var(--gold); font-size: 16px; margin-bottom: 20px; letter-spacing: 3px; }
+.test-card.featured-test .test-stars { color: #F5C96A; }
+.test-quote {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 19px; font-style: italic; color: var(--ink);
+  line-height: 1.6; margin-bottom: 24px; flex: 1;
+}
+.test-card.featured-test .test-quote { color: white; font-size: 22px; }
+.test-author { display: flex; align-items: center; gap: 14px; }
+.test-avatar {
+  width: 44px; height: 44px; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 18px; font-weight: 700; color: white; flex-shrink: 0;
+}
+.test-name { font-weight: 600; font-size: 14px; color: var(--ink); }
+.test-card.featured-test .test-name { color: white; }
+.test-loc { font-size: 12px; color: var(--muted); }
+.test-card.featured-test .test-loc { color: rgba(255,255,255,0.6); }
+
+/* ═══════════════════════════════
+   FAQ
+═══════════════════════════════ */
+#faq { padding: 120px 0; background: var(--blush); }
+.faq-inner { display: grid; grid-template-columns: 1fr 1.5fr; gap: 80px; align-items: start; }
+.faq-left .label { display: block; margin-bottom: 16px; }
+.faq-left h2 { color: var(--plum-dd); margin-bottom: 20px; }
+.faq-left p { color: var(--muted); font-size: 15px; line-height: 1.8; font-weight: 300; margin-bottom: 32px; }
+.faq-list { display: flex; flex-direction: column; gap: 12px; }
+.faq-item {
+  background: white; border-radius: var(--r-sm);
+  border: 1px solid var(--border); overflow: hidden;
+  transition: box-shadow 0.3s;
+}
+.faq-item.open { box-shadow: var(--shadow-sm); }
+.faq-question {
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 20px 24px; cursor: pointer;
+  font-weight: 600; font-size: 15px; color: var(--ink);
+  gap: 16px; transition: color 0.2s;
+  list-style: none; /* for summary element */
+  -webkit-user-select: none; user-select: none;
+}
+.faq-question:hover { color: var(--plum); }
+.faq-icon {
+  width: 28px; height: 28px; border-radius: 50%;
+  background: var(--blush);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 18px; color: var(--plum); flex-shrink: 0;
+  transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1); line-height: 1;
+  font-weight: 300;
+}
+.faq-item.open .faq-icon { background: var(--plum); color: white; transform: rotate(45deg); }
+/* FIX: grid-based animation avoids layout jump from max-height hack */
+.faq-answer {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.35s ease;
+}
+.faq-item.open .faq-answer { grid-template-rows: 1fr; }
+.faq-answer-inner { overflow: hidden; }
+.faq-answer p { padding: 0 24px 20px; font-size: 14px; color: var(--muted); line-height: 1.8; }
+
+/* ═══════════════════════════════
+   TEAM
+═══════════════════════════════ */
+#team { padding: 120px 0; background: var(--cream); }
+.team-header { text-align: center; margin-bottom: 72px; }
+.team-header .label { margin-bottom: 16px; display: block; }
+.team-header h2 { color: var(--plum-dd); margin-bottom: 16px; }
+.team-header p { color: var(--muted); max-width: 520px; margin: 0 auto; font-size: 16px; font-weight: 300; }
+.team-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 20px; }
+.team-card {
+  background: white; border-radius: var(--r-md);
+  padding: 32px 20px; text-align: center;
+  border: 1px solid var(--border); transition: all 0.3s;
+}
+.team-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-md); }
+.team-avatar-wrap {
+  position: relative; width: 80px; height: 80px; margin: 0 auto 16px;
+}
+.team-avatar {
+  width: 80px; height: 80px; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 26px; font-weight: 700; color: white;
+}
+/* FIX: avatar ring using border instead of mask (universal browser support) */
+.team-avatar-ring {
+  position: absolute; inset: -3px; border-radius: 50%;
+  background: linear-gradient(135deg, var(--plum), var(--rose));
+  z-index: -1;
+}
+.team-role { font-size: 10px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--rose); margin-bottom: 8px; }
+.team-name { font-family: 'Cormorant Garamond', serif; font-size: 18px; color: var(--plum-dd); margin-bottom: 6px; font-weight: 600; }
+.team-desc { font-size: 12px; color: var(--muted); line-height: 1.6; }
+.team-type {
+  margin-top: 12px; display: inline-block;
+  font-size: 10px; font-weight: 600; letter-spacing: 1px; text-transform: uppercase;
+  padding: 3px 10px; border-radius: 20px;
+  background: var(--blush); color: var(--plum);
+}
+
+/* ═══════════════════════════════
+   CTA BANNER
+═══════════════════════════════ */
+#cta {
+  padding: 100px 0;
+  background: linear-gradient(135deg, var(--plum-dd) 0%, var(--plum) 50%, #8B3A5E 100%);
+  position: relative; overflow: hidden; text-align: center;
+}
+#cta::before {
+  content: ''; position: absolute;
+  width: 500px; height: 500px; border-radius: 50%;
+  background: rgba(255,255,255,0.04); top: -200px; left: -100px;
+  pointer-events: none;
+}
+#cta::after {
+  content: ''; position: absolute;
+  width: 300px; height: 300px; border-radius: 50%;
+  background: rgba(255,255,255,0.05); bottom: -100px; right: 10%;
+  pointer-events: none;
+}
+.cta-inner { position: relative; z-index: 1; }
+.cta-inner .label { color: var(--rose-l); margin-bottom: 20px; display: block; }
+.cta-inner h2 { color: white; margin-bottom: 20px; }
+.cta-inner p { color: rgba(255,255,255,0.75); max-width: 500px; margin: 0 auto 40px; font-size: 17px; font-weight: 300; }
+.cta-btns { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+
+/* ═══════════════════════════════
+   CONTACT
+═══════════════════════════════ */
+#contact { padding: 120px 0; background: var(--cream); }
+.contact-grid { display: grid; grid-template-columns: 1fr 1.4fr; gap: 80px; align-items: start; }
+.contact-left .label { display: block; margin-bottom: 16px; }
+.contact-left h2 { color: var(--plum-dd); margin-bottom: 20px; }
+.contact-left p { color: var(--muted); font-size: 15px; line-height: 1.9; margin-bottom: 40px; font-weight: 300; }
+.contact-info { display: flex; flex-direction: column; gap: 20px; }
+.contact-item { display: flex; gap: 16px; align-items: flex-start; }
+.ci-icon { width: 44px; height: 44px; border-radius: 12px; background: var(--blush); display: flex; align-items: center; justify-content: center; font-size: 18px; flex-shrink: 0; }
+.ci-label { font-size: 11px; font-weight: 600; letter-spacing: 1px; text-transform: uppercase; color: var(--muted); margin-bottom: 4px; }
+.ci-value { font-size: 15px; color: var(--ink); font-weight: 500; }
+
+/* Form — FIX: proper form element, ids for labels, select arrow */
+.contact-form {
+  background: white; border-radius: var(--r-md);
+  padding: 48px; box-shadow: var(--shadow-sm);
+  border: 1px solid var(--border);
+}
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+.form-group { margin-bottom: 20px; }
+.form-group label {
+  display: block; font-size: 12px; font-weight: 600;
+  letter-spacing: 1px; text-transform: uppercase;
+  color: var(--muted); margin-bottom: 8px;
+}
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%; padding: 14px 18px;
+  border: 1.5px solid var(--border); border-radius: var(--r-sm);
+  font-family: 'Jost', sans-serif; font-size: 15px;
+  color: var(--ink); background: var(--cream);
+  outline: none; transition: all 0.2s;
+}
+/* FIX: custom select arrow replaces the lost appearance:none default */
+.form-group select {
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath fill='%235B2D8E' d='M1 1l5 5 5-5'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 16px center;
+  padding-right: 44px;
+  cursor: pointer;
+}
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  border-color: var(--plum); background: white;
+  box-shadow: 0 0 0 3px rgba(91,45,142,0.1);
+}
+.form-group input.error,
+.form-group select.error,
+.form-group textarea.error { border-color: #C94070; box-shadow: 0 0 0 3px rgba(201,64,112,0.1); }
+.form-error-msg { font-size: 12px; color: var(--rose); margin-top: 5px; display: none; }
+.form-error-msg.show { display: block; }
+.form-group textarea { resize: vertical; min-height: 120px; }
+.form-disclaimer { font-size: 12px; color: var(--muted); margin-top: 16px; line-height: 1.6; }
+/* Honeypot (bot trap) */
+.hp-field { position: absolute; left: -9999px; opacity: 0; pointer-events: none; tabindex: -1; }
+
+/* ═══════════════════════════════
+   FOOTER — FIX: h5 contrast
+═══════════════════════════════ */
+#footer { background: var(--plum-dd); padding: 80px 0 0; }
+.footer-grid {
+  display: grid; grid-template-columns: 1.8fr 1fr 1fr 1fr;
+  gap: 60px; margin-bottom: 60px;
+}
+.footer-brand p {
+  color: rgba(255,255,255,0.55); /* FIX: raised from 0.45 for WCAG AA */
+  font-size: 14px; line-height: 1.8; margin-top: 16px; max-width: 280px; font-weight: 300;
+}
+.footer-social { display: flex; gap: 10px; margin-top: 24px; }
+.social-btn {
+  width: 36px; height: 36px; border-radius: 50%;
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.15);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 14px; text-decoration: none; transition: all 0.2s; cursor: pointer;
+}
+.social-btn:hover { background: var(--rose); border-color: var(--rose); transform: translateY(-2px); }
+.footer-col h5 {
+  font-size: 11px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase;
+  color: rgba(255,255,255,0.75); /* FIX: raised from 0.4 — passes WCAG AA */
+  margin-bottom: 20px;
+}
+.footer-links { list-style: none; display: flex; flex-direction: column; gap: 12px; }
+.footer-links a {
+  color: rgba(255,255,255,0.6); text-decoration: none;
+  font-size: 14px; transition: color 0.2s; font-weight: 300;
+}
+.footer-links a:hover { color: var(--rose-l); }
+.footer-bottom {
+  border-top: 1px solid rgba(255,255,255,0.08);
+  padding: 24px 0;
+  display: flex; justify-content: space-between; align-items: center;
+  flex-wrap: wrap; gap: 12px;
+}
+.footer-bottom p { color: rgba(255,255,255,0.4); font-size: 13px; font-weight: 300; }
+.footer-disclaimer {
+  font-size: 11px; color: rgba(255,255,255,0.3);
+  text-align: center; padding: 12px 40px 20px; line-height: 1.6;
+}
+
+/* ═══════════════════════════════
+   BACK TO TOP
+═══════════════════════════════ */
+#back-top {
+  position: fixed; bottom: 32px; right: 32px;
+  width: 48px; height: 48px; border-radius: 50%;
+  background: var(--plum); color: white; border: none;
+  cursor: pointer; font-size: 18px; font-weight: 700;
+  display: flex; align-items: center; justify-content: center;
+  box-shadow: var(--shadow-md);
+  opacity: 0; transform: translateY(20px);
+  transition: all 0.3s; z-index: 900;
+}
+#back-top.visible { opacity: 1; transform: translateY(0); }
+#back-top:hover { background: var(--plum-d); transform: translateY(-3px); }
+
+/* ═══════════════════════════════
+   COOKIE CONSENT (DPDPA 2023)
+═══════════════════════════════ */
+#cookie-banner {
+  position: fixed; bottom: 0; left: 0; right: 0;
+  background: var(--plum-dd);
+  border-top: 1px solid rgba(255,255,255,0.1);
+  padding: 20px 40px;
+  display: flex; align-items: center; gap: 20px;
+  flex-wrap: wrap; z-index: 2000;
+  transform: translateY(100%);
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+#cookie-banner.show { transform: translateY(0); }
+#cookie-banner p {
+  flex: 1; min-width: 260px;
+  font-size: 13px; color: rgba(255,255,255,0.75); line-height: 1.6;
+}
+#cookie-banner a { color: var(--rose-l); text-decoration: underline; }
+.cookie-btns { display: flex; gap: 10px; flex-wrap: wrap; }
+.cookie-accept {
+  padding: 10px 22px; background: var(--rose); color: white;
+  border: none; border-radius: 50px; font-size: 13px; font-weight: 600;
+  cursor: pointer; transition: background 0.2s; font-family: 'Jost', sans-serif;
+}
+.cookie-accept:hover { background: #a83360; }
+.cookie-decline {
+  padding: 10px 22px; background: transparent; color: rgba(255,255,255,0.6);
+  border: 1px solid rgba(255,255,255,0.25); border-radius: 50px;
+  font-size: 13px; font-weight: 500; cursor: pointer; transition: all 0.2s;
+  font-family: 'Jost', sans-serif;
+}
+.cookie-decline:hover { border-color: rgba(255,255,255,0.5); color: white; }
+
+/* ═══════════════════════════════
+   SCROLL ANIMATIONS
+═══════════════════════════════ */
+.reveal {
+  opacity: 0; transform: translateY(28px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+.reveal.visible { opacity: 1; transform: translateY(0); }
+.reveal-delay-1 { transition-delay: 0.1s; }
+.reveal-delay-2 { transition-delay: 0.2s; }
+.reveal-delay-3 { transition-delay: 0.3s; }
+.reveal-delay-4 { transition-delay: 0.4s; }
+@media (prefers-reduced-motion: reduce) {
+  .reveal { opacity: 1; transform: none; transition: none; }
+}
+
+/* ═══════════════════════════════
+   RESPONSIVE
+═══════════════════════════════ */
+@media (max-width: 1024px) {
+  .services-grid { grid-template-columns: repeat(2, 1fr); }
+  .team-grid { grid-template-columns: repeat(3, 1fr); }
+  .footer-grid { grid-template-columns: 1fr 1fr; gap: 40px; }
+}
+@media (max-width: 768px) {
+  .nav-links, .nav-cta { display: none; }
+  .hamburger { display: flex; }
+  .hero-inner { grid-template-columns: 1fr; padding: 110px 24px 60px; gap: 40px; }
+  .hero-visual { display: none; }
+  .about-grid { grid-template-columns: 1fr; gap: 40px; }
+  .about-card-stack { height: 320px; }
+  .sc-1 { width: 170px; }
+  .sc-2 { top: 60px; width: 190px; }
+  .sc-3 { display: none; }
+  .sc-4 { bottom: 10px; width: 170px; }
+  .how-steps { grid-template-columns: repeat(2, 1fr); gap: 40px; }
+  .how-steps::before { display: none; }
+  .pricing-grid { grid-template-columns: 1fr; }
+  .price-card.featured { margin: 0; padding: 44px 36px; }
+  .test-grid { grid-template-columns: 1fr; }
+  .team-grid { grid-template-columns: repeat(2, 1fr); }
+  .contact-grid { grid-template-columns: 1fr; gap: 48px; }
+  .contact-form { padding: 28px 24px; }
+  .form-row { grid-template-columns: 1fr; }
+  .faq-inner { grid-template-columns: 1fr; gap: 40px; }
+  .footer-grid { grid-template-columns: 1fr 1fr; }
+  .footer-bottom { flex-direction: column; text-align: center; }
+  .container { padding: 0 20px; }
+  .services-grid { grid-template-columns: 1fr; }
+  #about, #services, #how, #pricing, #testimonials, #faq, #team, #contact { padding: 80px 0; }
+  #cta { padding: 72px 0; }
+  .hero-stats { gap: 20px; }
+  #cookie-banner { padding: 16px 20px; }
+}
+@media (max-width: 480px) {
+  .hero-cta { flex-direction: column; align-items: flex-start; }
+  .cta-btns { flex-direction: column; align-items: center; }
+  .team-grid { grid-template-columns: 1fr 1fr; }
+  .footer-grid { grid-template-columns: 1fr; }
+  .nav-inner { padding: 0 20px; }
+  .mobile-menu { padding-left: 20px; padding-right: 20px; }
+  .mobile-menu.open { padding: 16px 20px 24px; }
+}
+</style>
+</head>
+<body>
+
+<!-- Skip Navigation (Accessibility) -->
+<a href="#main-content" class="skip-nav">Skip to main content</a>
+
+<!-- ═══ COOKIE CONSENT BANNER (DPDPA 2023 Compliance) ═══ -->
+<div id="cookie-banner" role="dialog" aria-label="Cookie consent" aria-live="polite">
+  <p>We use cookies to improve your experience. By continuing, you agree to our <a href="#" onclick="return false;">Privacy Policy</a>. Under India's DPDPA 2023, your health data is processed only with your explicit consent.</p>
+  <div class="cookie-btns">
+    <button class="cookie-accept" onclick="acceptCookies()">Accept All</button>
+    <button class="cookie-decline" onclick="declineCookies()">Essential Only</button>
+  </div>
+</div>
+
+<!-- ═══ NAVBAR ═══ -->
+<nav id="navbar" role="navigation" aria-label="Main navigation">
+  <div class="nav-inner">
+    <a href="#hero" class="nav-logo" aria-label="CycleWell Home">
+      <div class="nav-logo-mark" aria-hidden="true">
+        <svg viewBox="0 0 24 24" focusable="false" aria-hidden="true"><path d="M12 21.593c-5.63-5.539-11-10.297-11-14.402 0-3.791 3.068-5.191 5.281-5.191 1.312 0 4.151.501 5.719 4.457 1.59-3.968 4.464-4.447 5.726-4.447 2.54 0 5.274 1.621 5.274 5.181 0 4.069-5.136 8.625-11 14.402z"/></svg>
+      </div>
+      <span class="nav-logo-text">CycleWell</span>
+    </a>
+    <ul class="nav-links" role="list">
+      <li><a href="#about">About</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#pricing">Plans</a></li>
+      <li><a href="#team">Our Team</a></li>
+      <li><a href="#faq">FAQ</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <div class="nav-cta">
+      <a href="#contact" class="nav-btn-ghost">Get In Touch</a>
+      <a href="#pricing" class="nav-btn-solid">Join Free</a>
+    </div>
+    <button class="hamburger" id="burger" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mobileMenu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <!-- Animated mobile menu -->
+  <div class="mobile-menu" id="mobileMenu" role="menu" aria-label="Mobile navigation">
+    <a href="#about" role="menuitem">About</a>
+    <a href="#services" role="menuitem">Services</a>
+    <a href="#pricing" role="menuitem">Plans &amp; Pricing</a>
+    <a href="#team" role="menuitem">Our Team</a>
+    <a href="#faq" role="menuitem">FAQ</a>
+    <a href="#contact" role="menuitem">Contact Us</a>
+    <div class="mobile-cta">
+      <a href="#pricing" class="btn btn-rose" style="width:100%; margin-top:8px;" role="menuitem">Join Free →</a>
+    </div>
+  </div>
+</nav>
+<!-- Click-outside overlay for mobile menu -->
+<div id="menu-overlay" aria-hidden="true"></div>
+
+<!-- ═══ HERO ═══ -->
+<section id="hero" aria-label="Hero section">
+  <div class="hero-blob blob-1" aria-hidden="true"></div>
+  <div class="hero-blob blob-2" aria-hidden="true"></div>
+  <div class="hero-blob blob-3" aria-hidden="true"></div>
+  <div class="hero-texture" aria-hidden="true"></div>
+  <div class="hero-inner" id="main-content">
+    <div class="hero-left">
+      <div class="hero-label" aria-label="Platform tag">
+        <div class="hero-label-dot" aria-hidden="true"></div>
+        India's Holistic PCOS Wellness Platform
+      </div>
+      <h1 class="hero-title">
+        Reclaim.<br>
+        <em>Rebalance.</em><br>
+        Rise.
+      </h1>
+      <p class="hero-sub">You are not broken. Your body is asking for support. CycleWell brings together certified nutritionists, psychologists, fitness coaches, and doctors — all in one wellness ecosystem built for women with PCOS.</p>
+      <div class="hero-cta">
+        <a href="#pricing" class="btn btn-rose">Start Your Journey →</a>
+        <a href="#services" class="btn btn-white">Explore Services</a>
+      </div>
+      <div class="hero-stats" role="list" aria-label="Key statistics">
+        <div role="listitem">
+          <div class="hero-stat-num">1 in 5</div>
+          <div class="hero-stat-label">Women in Tamil Nadu<br>affected by PCOS</div>
+        </div>
+        <div class="hero-stat-divider" aria-hidden="true"></div>
+        <div role="listitem">
+          <div class="hero-stat-num">4</div>
+          <div class="hero-stat-label">Integrated wellness<br>pillars</div>
+        </div>
+        <div class="hero-stat-divider" aria-hidden="true"></div>
+        <div role="listitem">
+          <div class="hero-stat-num">₹0</div>
+          <div class="hero-stat-label">To join our<br>community</div>
+        </div>
+      </div>
+    </div>
+    <div class="hero-visual" aria-hidden="true">
+      <div class="hero-card-main">
+        <div class="hero-card-avatar">P</div>
+        <blockquote class="hero-card-quote">"I finally feel understood. CycleWell changed how I relate to my own body."</blockquote>
+        <div class="hero-card-name"><strong>Priya S.</strong> · Chennai, Tamil Nadu</div>
+        <div style="margin-top:20px; display:flex; gap:8px; flex-wrap:wrap;">
+          <span style="background:rgba(201,64,112,0.2); color:var(--rose-l); padding:6px 14px; border-radius:20px; font-size:12px; font-weight:600;">✓ Lost 8kg in 4 months</span>
+          <span style="background:rgba(107,158,122,0.2); color:var(--sage-l); padding:6px 14px; border-radius:20px; font-size:12px; font-weight:600;">✓ Regular cycles</span>
+        </div>
+      </div>
+      <div class="hero-pill pill-1">
+        <div class="hero-pill-icon" style="background:rgba(107,158,122,0.3);">🌿</div>
+        Nutrition Coaching
+      </div>
+      <div class="hero-pill pill-2">
+        <div class="hero-pill-icon" style="background:rgba(201,64,112,0.3);">🧠</div>
+        Mental Wellness
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ TRUST BAR ═══ -->
+<div id="trust" role="region" aria-label="Trust indicators">
+  <div class="container">
+    <div class="trust-inner">
+      <div class="trust-item"><div class="trust-icon" aria-hidden="true">🏛️</div>Udyam Registered MSME</div>
+      <div class="trust-divider" aria-hidden="true"></div>
+      <div class="trust-item"><div class="trust-icon" aria-hidden="true">🩺</div>RCI-Licensed Psychologists</div>
+      <div class="trust-divider" aria-hidden="true"></div>
+      <div class="trust-item"><div class="trust-icon" aria-hidden="true">🍃</div>Certified Nutritionists</div>
+      <div class="trust-divider" aria-hidden="true"></div>
+      <div class="trust-item"><div class="trust-icon" aria-hidden="true">🔒</div>DPDPA 2023 Compliant</div>
+      <div class="trust-divider" aria-hidden="true"></div>
+      <div class="trust-item"><div class="trust-icon" aria-hidden="true">📍</div>Based in Chennai</div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══ ABOUT ═══ -->
+<section id="about" aria-label="About CycleWell">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-visual reveal" aria-hidden="true">
+        <div class="about-card-stack">
+          <div class="stat-card sc-1"><span class="stat-tag tag-rose">Tamil Nadu</span><div class="stat-num">18%</div><div class="stat-desc">Adolescent girls in Tamil Nadu affected by PCOS (published study)</div></div>
+          <div class="stat-card sc-2"><span class="stat-tag tag-plum">Urban India</span><div class="stat-num">22.5%</div><div class="stat-desc">Urban Indian women have PCOS — yet 70% remain unmanaged</div></div>
+          <div class="stat-card sc-3"><span class="stat-tag tag-sage">Mental Health</span><div class="stat-num">50%</div><div class="stat-desc">Women with PCOS experience depression or anxiety</div></div>
+          <div class="stat-card sc-4"><span class="stat-tag tag-white">Market</span><div class="stat-num">₹500Cr+</div><div class="stat-desc">Addressable market in Tamil Nadu alone</div></div>
+        </div>
+      </div>
+      <div class="about-content reveal reveal-delay-2">
+        <span class="label">Why CycleWell</span>
+        <h2>PCOS is more than<br><em>just irregular periods</em></h2>
+        <p class="about-lead">It is a complex hormonal and metabolic condition affecting your insulin, cortisol, mental health, weight, skin, and fertility — all at once. Yet most women are handed a prescription and sent home.</p>
+        <div class="about-points">
+          <div class="about-point">
+            <div class="point-icon" style="background:#F7EDF3;" aria-hidden="true">🚫</div>
+            <div><div class="point-title">Not a hospital. Not a diet app.</div><div class="point-desc">We are a wellness and consultancy platform — legally structured, professionally guided, community-powered.</div></div>
+          </div>
+          <div class="about-point">
+            <div class="point-icon" style="background:#E8F4EC;" aria-hidden="true">🤝</div>
+            <div><div class="point-title">Doctors you can actually reach</div><div class="point-desc">Empanelled gynecologists and endocrinologists are part of our ecosystem — connected on referral, not gatekept behind appointments.</div></div>
+          </div>
+          <div class="about-point">
+            <div class="point-icon" style="background:#EDE5F6;" aria-hidden="true">💜</div>
+            <div><div class="point-title">A community that understands</div><div class="point-desc">Thousands of women across India walking the same journey. Because healing is better together.</div></div>
+          </div>
+        </div>
+        <a href="#services" class="btn btn-primary">See What We Offer →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ SERVICES ═══ -->
+<section id="services" aria-label="Our services">
+  <div class="container">
+    <div class="services-header reveal">
+      <span class="label">Our Pillars</span>
+      <h2>Four Pillars of<br><em style="color:var(--rose-l);">Holistic PCOS Wellness</em></h2>
+      <p>Every woman with PCOS needs more than one answer. We bring all four together.</p>
+    </div>
+    <div class="services-grid">
+      <div class="service-card sc-medical reveal reveal-delay-1">
+        <div class="service-icon-wrap si-medical" aria-hidden="true">🩺</div>
+        <h3>Medical Connect</h3>
+        <p>Empanelled gynecologists and endocrinologists available through referral partnerships — when you need real clinical guidance.</p>
+        <ul class="service-features" aria-label="Medical connect features">
+          <li><div class="sf-dot dot-rose" aria-hidden="true"></div>Doctor referral system</li>
+          <li><div class="sf-dot dot-rose" aria-hidden="true"></div>Lab test partnerships</li>
+          <li><div class="sf-dot dot-rose" aria-hidden="true"></div>Medication check-in support</li>
+          <li><div class="sf-dot dot-rose" aria-hidden="true"></div>Telemedicine connectivity</li>
+        </ul>
+      </div>
+      <div class="service-card sc-nutrition reveal reveal-delay-2">
+        <div class="service-icon-wrap si-nutrition" aria-hidden="true">🥗</div>
+        <h3>Nutrition Coaching</h3>
+        <p>Certified nutritionists crafting PCOS-specific, South Indian-friendly anti-inflammatory meal plans — real food that heals.</p>
+        <ul class="service-features" aria-label="Nutrition coaching features">
+          <li><div class="sf-dot dot-sage" aria-hidden="true"></div>Personalised meal plans</li>
+          <li><div class="sf-dot dot-sage" aria-hidden="true"></div>Insulin resistance management</li>
+          <li><div class="sf-dot dot-sage" aria-hidden="true"></div>Millet &amp; traditional foods focus</li>
+          <li><div class="sf-dot dot-sage" aria-hidden="true"></div>Weekly nutritionist check-ins</li>
+        </ul>
+      </div>
+      <div class="service-card sc-mental reveal reveal-delay-3">
+        <div class="service-icon-wrap si-mental" aria-hidden="true">🧠</div>
+        <h3>Mental Wellness</h3>
+        <p>RCI-licensed psychologists addressing body image, anxiety, cycle-related mood disorders, and the emotional weight of PCOS.</p>
+        <ul class="service-features" aria-label="Mental wellness features">
+          <li><div class="sf-dot dot-purple" aria-hidden="true"></div>1-on-1 counselling sessions</li>
+          <li><div class="sf-dot dot-purple" aria-hidden="true"></div>Group support circles</li>
+          <li><div class="sf-dot dot-purple" aria-hidden="true"></div>Anxiety &amp; stress management</li>
+          <li><div class="sf-dot dot-purple" aria-hidden="true"></div>Crisis referral protocols</li>
+        </ul>
+      </div>
+      <div class="service-card sc-fitness reveal reveal-delay-4">
+        <div class="service-icon-wrap si-fitness" aria-hidden="true">🏃‍♀️</div>
+        <h3>Fitness Guidance</h3>
+        <p>Certified trainers with PCOS-adapted low-cortisol exercise protocols — because the wrong workout can worsen your hormones.</p>
+        <ul class="service-features" aria-label="Fitness guidance features">
+          <li><div class="sf-dot dot-gold" aria-hidden="true"></div>PCOS-adapted workout plans</li>
+          <li><div class="sf-dot dot-gold" aria-hidden="true"></div>Low-cortisol movement approach</li>
+          <li><div class="sf-dot dot-gold" aria-hidden="true"></div>Yoga &amp; breathwork sessions</li>
+          <li><div class="sf-dot dot-gold" aria-hidden="true"></div>Cycle-synced exercise guide</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ HOW IT WORKS ═══ -->
+<section id="how" aria-label="How CycleWell works">
+  <div class="container">
+    <div class="how-header reveal">
+      <span class="label">Getting Started</span>
+      <h2>Your Journey in<br><em>4 Simple Steps</em></h2>
+      <p>From sign-up to your first week of support — it couldn't be simpler.</p>
+    </div>
+    <ol class="how-steps" aria-label="Steps to get started">
+      <li class="how-step reveal reveal-delay-1">
+        <div class="step-num" aria-label="Step 1">1<span class="step-badge" aria-hidden="true">📋</span></div>
+        <h4>Join Free</h4>
+        <p>Sign up in 2 minutes. Complete a quick health questionnaire so we understand your PCOS profile and goals.</p>
+      </li>
+      <li class="how-step reveal reveal-delay-2">
+        <div class="step-num" aria-label="Step 2">2<span class="step-badge" aria-hidden="true">💜</span></div>
+        <h4>Choose Your Plan</h4>
+        <p>Pick the plan that suits you — from our free community to our all-inclusive Premium plan with full professional access.</p>
+      </li>
+      <li class="how-step reveal reveal-delay-3">
+        <div class="step-num" aria-label="Step 3">3<span class="step-badge" aria-hidden="true">👩‍⚕️</span></div>
+        <h4>Meet Your Team</h4>
+        <p>Get matched with your nutritionist, fitness coach, and psychologist. Book your first session — all inside the app.</p>
+      </li>
+      <li class="how-step reveal reveal-delay-4">
+        <div class="step-num" aria-label="Step 4">4<span class="step-badge" aria-hidden="true">🌟</span></div>
+        <h4>Start Thriving</h4>
+        <p>Follow your personalised plan. Track your progress. Connect with the community. Feel the difference within weeks.</p>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<!-- ═══ PRICING ═══ -->
+<section id="pricing" aria-label="Pricing plans">
+  <div class="container">
+    <div class="pricing-header reveal">
+      <span class="label">Simple Pricing</span>
+      <h2>Plans for Every<br><em>Stage of Your Journey</em></h2>
+      <p>No hidden fees. No clinical overheads. Transparent pricing designed for Indian women.</p>
+    </div>
+    <div class="pricing-grid">
+      <div class="price-card reveal reveal-delay-1">
+        <div class="price-plan">Basic</div>
+        <div class="price-amount"><span class="price-sym">₹</span><span class="price-num">299</span></div>
+        <div class="price-period">per month</div>
+        <p class="price-desc">Perfect to begin your PCOS wellness journey with community support and expert content.</p>
+        <ul class="price-features">
+          <li><span class="pf-check" aria-hidden="true">✓</span>Access to CycleWell App</li>
+          <li><span class="pf-check" aria-hidden="true">✓</span>Private WhatsApp community</li>
+          <li><span class="pf-check" aria-hidden="true">✓</span>Weekly wellness newsletters</li>
+          <li><span class="pf-check" aria-hidden="true">✓</span>PCOS education library</li>
+          <li><span class="pf-check" aria-hidden="true">✓</span>Monthly group Q&amp;A session</li>
+        </ul>
+        <a href="#contact" class="btn btn-outline">Get Started</a>
+      </div>
+      <div class="price-card featured reveal reveal-delay-2">
+        <div class="featured-badge">⭐ Most Popular</div>
+        <div class="price-plan">Plus</div>
+        <div class="price-amount"><span class="price-sym">₹</span><span class="price-num">699</span></div>
+        <div class="price-period">per month</div>
+        <p class="price-desc">The complete wellness package — nutrition, fitness, and mental wellness coaching included.</p>
+        <ul class="price-features">
+          <li><span class="pf-check" aria-hidden="true">✓</span>Everything in Basic</li>
+          <li><span class="pf-check" aria-hidden="true">✓</span>Monthly nutritionist check-in</li>
+          <li><span class="pf-check" aria-hidden="true">✓</span>Personalised meal plan</li>
+          <li><span class="pf-check" aria-hidden="true">✓</span>Fitness protocol for PCOS</li>
+          <li><span class="pf-check" aria-hidden="true">✓</span>Mental wellness group session</li>
+          <li><span class="pf-check" aria-hidden="true">✓</span>Priority app support</li>
+        </ul>
+        <a href="#contact" class="btn btn-rose">Join Plus →</a>
+      </div>
+      <div class="price-card reveal reveal-delay-3">
+        <div class="price-plan">Premium</div>
+        <div class="price-amount"><span class="price-sym">₹</span><span class="price-num">1,499</span></div>
+        <div class="price-period">per month</div>
+        <p class="price-desc">Full concierge wellness — all four pillars, priority bookings, and doctor referral included.</p>
+        <ul class="price-features">
+          <li><span class="pf-check" aria-hidden="true">✓</span>Everything in Plus</li>
+          <li><span class="pf-check" aria-hidden="true">✓</span>2× nutritionist sessions/month</li>
+          <li><span class="pf-check" aria-hidden="true">✓</span>1-on-1 psychology session</li>
+          <li><span class="pf-check" aria-hidden="true">✓</span>Doctor referral coordination</li>
+          <li><span class="pf-check" aria-hidden="true">✓</span>Lab test partnership benefits</li>
+          <li><span class="pf-check" aria-hidden="true">✓</span>Dedicated wellness buddy</li>
+        </ul>
+        <a href="#contact" class="btn btn-primary">Get Premium</a>
+      </div>
+    </div>
+    <p class="price-note">Save 20% on all plans with annual billing · <a href="#contact">Corporate wellness packages</a> available · 7-day free trial included</p>
+  </div>
+</section>
+
+<!-- ═══ TESTIMONIALS ═══ -->
+<section id="testimonials" aria-label="Customer testimonials">
+  <div class="container">
+    <div class="test-header reveal">
+      <span class="label">Real Stories</span>
+      <h2>Women Who Have<br><em>Found Their Rhythm</em></h2>
+    </div>
+    <div class="test-grid">
+      <article class="test-card reveal reveal-delay-1">
+        <div class="test-stars" aria-label="5 stars">★★★★★</div>
+        <blockquote class="test-quote">"For the first time in 5 years, my periods are regular. The nutritionist understood South Indian cooking and gave me a plan I could actually follow."</blockquote>
+        <div class="test-author">
+          <div class="test-avatar" style="background:linear-gradient(135deg,#5B2D8E,#C94070);" aria-hidden="true">A</div>
+          <div><div class="test-name">Ananya R.</div><div class="test-loc">Chennai · Plus Plan</div></div>
+        </div>
+      </article>
+      <article class="test-card featured-test reveal reveal-delay-2">
+        <div class="test-stars" aria-label="5 stars">★★★★★</div>
+        <blockquote class="test-quote">"I joined thinking it was just another diet app. CycleWell is a community. The psychologist sessions changed how I see my body. I feel like myself again."</blockquote>
+        <div class="test-author">
+          <div class="test-avatar" style="background:linear-gradient(135deg,#C94070,#E8A838);" aria-hidden="true">M</div>
+          <div><div class="test-name">Meenakshi T.</div><div class="test-loc">Coimbatore · Premium Plan</div></div>
+        </div>
+      </article>
+      <article class="test-card reveal reveal-delay-3">
+        <div class="test-stars" aria-label="5 stars">★★★★★</div>
+        <blockquote class="test-quote">"The fitness trainer made me stop doing HIIT — which was actually making my PCOS worse! Switched to their protocol and my energy levels doubled."</blockquote>
+        <div class="test-author">
+          <div class="test-avatar" style="background:linear-gradient(135deg,#6B9E7A,#5B2D8E);" aria-hidden="true">S</div>
+          <div><div class="test-name">Sowmya K.</div><div class="test-loc">Bangalore · Plus Plan</div></div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ TEAM ═══ -->
+<section id="team" aria-label="Our team">
+  <div class="container">
+    <div class="team-header reveal">
+      <span class="label">The Team</span>
+      <h2>The People in<br><em>Your Corner</em></h2>
+      <p>Every professional on CycleWell is carefully vetted, certified, and trained to understand the specific needs of women with PCOS.</p>
+    </div>
+    <div class="team-grid">
+      <div class="team-card reveal reveal-delay-1">
+        <div class="team-avatar-wrap">
+          <div class="team-avatar-ring" aria-hidden="true"></div>
+          <div class="team-avatar" style="background:linear-gradient(135deg,#5B2D8E,#C94070);" aria-hidden="true">F</div>
+        </div>
+        <div class="team-role">Founder &amp; CEO</div>
+        <div class="team-name">Founder</div>
+        <div class="team-desc">Wellness strategist &amp; community builder</div>
+        <span class="team-type">Founder</span>
+      </div>
+      <div class="team-card reveal reveal-delay-2">
+        <div class="team-avatar-wrap">
+          <div class="team-avatar-ring" aria-hidden="true"></div>
+          <div class="team-avatar" style="background:linear-gradient(135deg,#C94070,#8B3A5E);" aria-hidden="true">Dr</div>
+        </div>
+        <div class="team-role">Medical Connect</div>
+        <div class="team-name">Gynecologist</div>
+        <div class="team-desc">MBBS, MD — specialising in PCOS &amp; reproductive endocrinology</div>
+        <span class="team-type">Empanelled</span>
+      </div>
+      <div class="team-card reveal reveal-delay-3">
+        <div class="team-avatar-wrap">
+          <div class="team-avatar-ring" aria-hidden="true"></div>
+          <div class="team-avatar" style="background:linear-gradient(135deg,#6B9E7A,#3D6E50);" aria-hidden="true">N</div>
+        </div>
+        <div class="team-role">Nutrition</div>
+        <div class="team-name">Nutritionist</div>
+        <div class="team-desc">Certified Clinical Nutritionist specialising in hormonal &amp; metabolic health</div>
+        <span class="team-type">Empanelled</span>
+      </div>
+      <div class="team-card reveal reveal-delay-4">
+        <div class="team-avatar-wrap">
+          <div class="team-avatar-ring" aria-hidden="true"></div>
+          <div class="team-avatar" style="background:linear-gradient(135deg,#7B68EE,#5B2D8E);" aria-hidden="true">Psy</div>
+        </div>
+        <div class="team-role">Mental Wellness</div>
+        <div class="team-name">Psychologist</div>
+        <div class="team-desc">RCI Licensed · Body image, anxiety &amp; hormonal mood disorders</div>
+        <span class="team-type">Empanelled</span>
+      </div>
+      <div class="team-card reveal reveal-delay-4">
+        <div class="team-avatar-wrap">
+          <div class="team-avatar-ring" aria-hidden="true"></div>
+          <div class="team-avatar" style="background:linear-gradient(135deg,#D4963A,#C94070);" aria-hidden="true">Fit</div>
+        </div>
+        <div class="team-role">Fitness</div>
+        <div class="team-name">Fitness Trainer</div>
+        <div class="team-desc">Certified trainer with PCOS-adapted low-cortisol exercise specialisation</div>
+        <span class="team-type">Empanelled</span>
+      </div>
+    </div>
+    <p style="text-align:center; margin-top:40px; font-size:13px; color:var(--muted);">All professionals work as independent empanelled consultants. CycleWell is a wellness consultancy platform — not a clinical establishment.</p>
+  </div>
+</section>
+
+<!-- ═══ FAQ ═══ -->
+<section id="faq" aria-label="Frequently asked questions">
+  <div class="container">
+    <div class="faq-inner">
+      <div class="faq-left reveal">
+        <span class="label">FAQ</span>
+        <h2>Questions<br>We Hear<br><em>Often</em></h2>
+        <p>Everything you want to know before joining CycleWell. Can't find your answer? Reach out directly.</p>
+        <a href="#contact" class="btn btn-primary">Ask Us Anything →</a>
+      </div>
+      <div class="faq-list reveal reveal-delay-2" role="list">
+        <div class="faq-item" role="listitem">
+          <div class="faq-question" onclick="toggleFaq(this)" role="button" tabindex="0" aria-expanded="false" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();toggleFaq(this)}">
+            Is CycleWell a hospital or clinic?
+            <div class="faq-icon" aria-hidden="true">+</div>
+          </div>
+          <div class="faq-answer" role="region"><div class="faq-answer-inner"><p>No. CycleWell is a wellness and consultancy platform — not a clinical establishment. We do not diagnose, prescribe medication, or perform clinical procedures. We provide lifestyle support, nutrition guidance, fitness coaching, mental wellness, and referrals to empanelled medical professionals.</p></div></div>
+        </div>
+        <div class="faq-item" role="listitem">
+          <div class="faq-question" onclick="toggleFaq(this)" role="button" tabindex="0" aria-expanded="false" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();toggleFaq(this)}">
+            Can CycleWell replace my gynaecologist?
+            <div class="faq-icon" aria-hidden="true">+</div>
+          </div>
+          <div class="faq-answer" role="region"><div class="faq-answer-inner"><p>Absolutely not — and we never claim to. We strongly encourage all members to have a qualified gynaecologist overseeing their medical care. CycleWell complements clinical care by providing the lifestyle and emotional support that most doctors simply don't have time to provide during a 10-minute appointment.</p></div></div>
+        </div>
+        <div class="faq-item" role="listitem">
+          <div class="faq-question" onclick="toggleFaq(this)" role="button" tabindex="0" aria-expanded="false" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();toggleFaq(this)}">
+            Is my health data safe?
+            <div class="faq-icon" aria-hidden="true">+</div>
+          </div>
+          <div class="faq-answer" role="region"><div class="faq-answer-inner"><p>Yes. We are fully compliant with India's Digital Personal Data Protection Act, 2023 (DPDPA). Health data is classified as sensitive personal data and we collect it only with your explicit consent. We never share your personal data with third parties without your permission.</p></div></div>
+        </div>
+        <div class="faq-item" role="listitem">
+          <div class="faq-question" onclick="toggleFaq(this)" role="button" tabindex="0" aria-expanded="false" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();toggleFaq(this)}">
+            I'm not from Chennai — can I still join?
+            <div class="faq-icon" aria-hidden="true">+</div>
+          </div>
+          <div class="faq-answer" role="region"><div class="faq-answer-inner"><p>Yes! CycleWell is a digital-first platform. While headquartered in Chennai and particularly focused on Tamil Nadu, our app, nutrition coaching, fitness programs, and mental wellness sessions are available to women anywhere in India.</p></div></div>
+        </div>
+        <div class="faq-item" role="listitem">
+          <div class="faq-question" onclick="toggleFaq(this)" role="button" tabindex="0" aria-expanded="false" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();toggleFaq(this)}">
+            What if I need to see a doctor urgently?
+            <div class="faq-icon" aria-hidden="true">+</div>
+          </div>
+          <div class="faq-answer" role="region"><div class="faq-answer-inner"><p>In any medical emergency, please call 112 or visit your nearest hospital immediately. CycleWell is not an emergency medical service. Our Premium plan includes doctor referral coordination for non-emergency situations.</p></div></div>
+        </div>
+        <div class="faq-item" role="listitem">
+          <div class="faq-question" onclick="toggleFaq(this)" role="button" tabindex="0" aria-expanded="false" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();toggleFaq(this)}">
+            Can I cancel my subscription anytime?
+            <div class="faq-icon" aria-hidden="true">+</div>
+          </div>
+          <div class="faq-answer" role="region"><div class="faq-answer-inner"><p>Yes. There are no lock-in contracts. You can cancel your monthly plan at any time from your account settings. Annual plans are non-refundable after 30 days but you retain full access for the entire paid period.</p></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ CTA BANNER ═══ -->
+<section id="cta" aria-label="Call to action">
+  <div class="container">
+    <div class="cta-inner reveal">
+      <span class="label">Take the First Step</span>
+      <h2>Your healing journey<br><em style="color:var(--rose-l);">starts today</em></h2>
+      <p>Join Indian women who have reclaimed their health, their hormones, and their confidence with CycleWell.</p>
+      <div class="cta-btns">
+        <a href="#pricing" class="btn btn-rose">Start Free Trial →</a>
+        <a href="#contact" class="btn btn-white">Talk to Us First</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ CONTACT ═══ -->
+<section id="contact" aria-label="Contact CycleWell">
+  <div class="container">
+    <div class="contact-grid">
+      <div class="contact-left reveal">
+        <span class="label">Contact Us</span>
+        <h2>Let's Start a<br><em>Conversation</em></h2>
+        <p>Whether you have questions before joining, want a corporate wellness partnership, or are a healthcare professional interested in empanelment — we'd love to hear from you.</p>
+        <div class="contact-info">
+          <div class="contact-item">
+            <div class="ci-icon" aria-hidden="true">📍</div>
+            <div><div class="ci-label">Location</div><div class="ci-value">Chennai, Tamil Nadu, India</div></div>
+          </div>
+          <div class="contact-item">
+            <div class="ci-icon" aria-hidden="true">✉️</div>
+            <div><div class="ci-label">Email</div><div class="ci-value">hello@cyclewell.in</div></div>
+          </div>
+          <div class="contact-item">
+            <div class="ci-icon" aria-hidden="true">💬</div>
+            <div><div class="ci-label">WhatsApp Community</div><div class="ci-value">Join via link on Instagram</div></div>
+          </div>
+          <div class="contact-item">
+            <div class="ci-icon" aria-hidden="true">🕐</div>
+            <div><div class="ci-label">Response Time</div><div class="ci-value">Within 24 hours on working days</div></div>
+          </div>
+        </div>
+      </div>
+      <!-- FIX: proper form element with novalidate (we handle validation in JS) -->
+      <div class="contact-form reveal reveal-delay-2">
+        <h3 style="color:var(--plum-dd); margin-bottom:28px; font-size:24px;">Send Us a Message</h3>
+        <form id="contactForm" novalidate aria-label="Contact form" style="position:relative;">
+          <!-- Honeypot bot trap -->
+          <div class="hp-field" aria-hidden="true">
+            <label for="hp_website">Website (do not fill this)</label>
+            <input type="text" id="hp_website" name="website" tabindex="-1" autocomplete="off">
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="firstName">First Name <span aria-hidden="true" style="color:var(--rose);">*</span></label>
+              <input type="text" id="firstName" name="firstName" placeholder="Priya" required autocomplete="given-name" aria-required="true">
+              <div class="form-error-msg" id="firstNameErr" role="alert">Please enter your first name.</div>
+            </div>
+            <div class="form-group">
+              <label for="lastName">Last Name <span aria-hidden="true" style="color:var(--rose);">*</span></label>
+              <input type="text" id="lastName" name="lastName" placeholder="Sharma" required autocomplete="family-name" aria-required="true">
+              <div class="form-error-msg" id="lastNameErr" role="alert">Please enter your last name.</div>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="email">Email Address <span aria-hidden="true" style="color:var(--rose);">*</span></label>
+            <input type="email" id="email" name="email" placeholder="you@email.com" required autocomplete="email" aria-required="true">
+            <div class="form-error-msg" id="emailErr" role="alert">Please enter a valid email address.</div>
+          </div>
+          <div class="form-group">
+            <label for="phone">Phone <span style="color:var(--muted); font-weight:400; text-transform:none; letter-spacing:0;">(optional)</span></label>
+            <input type="tel" id="phone" name="phone" placeholder="+91 98765 43210" autocomplete="tel" pattern="[+]?[0-9\s\-]{7,15}">
+            <div class="form-error-msg" id="phoneErr" role="alert">Please enter a valid phone number.</div>
+          </div>
+          <div class="form-group">
+            <label for="interest">I'm interested in <span aria-hidden="true" style="color:var(--rose);">*</span></label>
+            <select id="interest" name="interest" required aria-required="true">
+              <option value="">Select an option</option>
+              <option value="member">Joining as a member</option>
+              <option value="corporate">Corporate wellness partnership</option>
+              <option value="professional">Professional empanelment</option>
+              <option value="media">Media / Press enquiry</option>
+              <option value="investment">Investment / Collaboration</option>
+              <option value="other">Other</option>
+            </select>
+            <div class="form-error-msg" id="interestErr" role="alert">Please select an option.</div>
+          </div>
+          <div class="form-group">
+            <label for="message">Your Message <span aria-hidden="true" style="color:var(--rose);">*</span></label>
+            <textarea id="message" name="message" placeholder="Tell us a little about yourself or your query..." required minlength="20" aria-required="true"></textarea>
+            <div class="form-error-msg" id="messageErr" role="alert">Please enter a message (at least 20 characters).</div>
+          </div>
+          <button type="submit" class="btn btn-primary" style="width:100%;" id="submitBtn">Send Message →</button>
+          <div id="formSuccess" role="alert" aria-live="polite" style="display:none; margin-top:16px; padding:16px; background:#E8F4EC; border-radius:var(--r-sm); color:#2D5C37; font-size:14px; font-weight:600;">
+            ✓ Message sent! We'll reply within 24 hours. Check your email for confirmation.
+          </div>
+          <p class="form-disclaimer">⚠️ <strong>Important:</strong> CycleWell is a wellness platform, not a medical service. Do not send urgent medical concerns here. In a medical emergency, call <strong>112</strong>.</p>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ FOOTER ═══ -->
+<footer id="footer" role="contentinfo">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="#hero" class="nav-logo" aria-label="CycleWell Home" style="display:inline-flex; text-decoration:none;">
+          <div class="nav-logo-mark" aria-hidden="true">
+            <svg viewBox="0 0 24 24" style="width:18px;height:18px;fill:white;" focusable="false" aria-hidden="true"><path d="M12 21.593c-5.63-5.539-11-10.297-11-14.402 0-3.791 3.068-5.191 5.281-5.191 1.312 0 4.151.501 5.719 4.457 1.59-3.968 4.464-4.447 5.726-4.447 2.54 0 5.274 1.621 5.274 5.181 0 4.069-5.136 8.625-11 14.402z"/></svg>
+          </div>
+          <span class="nav-logo-text">CycleWell</span>
+        </a>
+        <p>India's holistic PCOS wellness platform. Nutrition · Fitness · Mental Wellness · Medical Connect. Chennai-based, pan-India reach.</p>
+        <div class="footer-social" role="list" aria-label="Social media links">
+          <a class="social-btn" href="#" title="CycleWell on Instagram" aria-label="Instagram" role="listitem">📷</a>
+          <a class="social-btn" href="#" title="CycleWell on Facebook" aria-label="Facebook" role="listitem">👤</a>
+          <a class="social-btn" href="#" title="CycleWell on YouTube" aria-label="YouTube" role="listitem">▶</a>
+          <a class="social-btn" href="#" title="CycleWell on LinkedIn" aria-label="LinkedIn" role="listitem">💼</a>
+          <a class="social-btn" href="#" title="CycleWell on WhatsApp" aria-label="WhatsApp" role="listitem">💬</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h5>Platform</h5>
+        <ul class="footer-links">
+          <li><a href="#about">About CycleWell</a></li>
+          <li><a href="#services">Our Services</a></li>
+          <li><a href="#pricing">Pricing Plans</a></li>
+          <li><a href="#how">How It Works</a></li>
+          <li><a href="#team">Our Team</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Support</h5>
+        <ul class="footer-links">
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="#contact">Contact Us</a></li>
+          <li><a href="#" onclick="return false;">Community Guidelines</a></li>
+          <li><a href="#" onclick="return false;">Partner With Us</a></li>
+          <li><a href="#" onclick="return false;">Professionals: Join Us</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Legal</h5>
+        <ul class="footer-links">
+          <li><a href="#" onclick="return false;">Privacy Policy</a></li>
+          <li><a href="#" onclick="return false;">Terms of Service</a></li>
+          <li><a href="#" onclick="return false;">Disclaimer</a></li>
+          <li><a href="#" onclick="return false;">Refund Policy</a></li>
+          <li><a href="#" onclick="return false;">DPDPA Compliance</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 CycleWell. All rights reserved. Registered as a Sole Proprietorship, India.</p>
+      <p style="font-size:12px;">Made with 💜 in Chennai</p>
+    </div>
+  </div>
+  <div class="footer-disclaimer">
+    ⚠️ <strong style="color:rgba(255,255,255,0.5);">Medical Disclaimer:</strong> CycleWell is a wellness and consultancy platform. All content is for informational and wellness purposes only and does not constitute medical advice, diagnosis, or treatment. Always consult a qualified healthcare provider for medical decisions. In a medical emergency, call 112.
+  </div>
+</footer>
+
+<!-- Back to top -->
+<button id="back-top" aria-label="Back to top of page">↑</button>
+
+<script>
+/* ══════════════════════════════════════════════
+   PERFORMANCE: RAF-throttled scroll handler
+══════════════════════════════════════════════ */
+let rafScheduled = false;
+function onScroll() {
+  if (!rafScheduled) {
+    rafScheduled = true;
+    requestAnimationFrame(() => {
+      const y = window.scrollY;
+      navbar.classList.toggle('scrolled', y > 60);
+      document.getElementById('back-top').classList.toggle('visible', y > 400);
+      rafScheduled = false;
+    });
+  }
+}
+const navbar = document.getElementById('navbar');
+window.addEventListener('scroll', onScroll, { passive: true });
+
+/* ══════════════════════════════════════════════
+   MOBILE MENU — animated, click-outside close
+══════════════════════════════════════════════ */
+const burger = document.getElementById('burger');
+const mobileMenu = document.getElementById('mobileMenu');
+const overlay = document.getElementById('menu-overlay');
+
+function openMobile() {
+  mobileMenu.classList.add('open');
+  overlay.classList.add('visible');
+  burger.setAttribute('aria-expanded', 'true');
+  document.body.style.overflow = 'hidden';
+}
+function closeMobile() {
+  mobileMenu.classList.remove('open');
+  overlay.classList.remove('visible');
+  burger.setAttribute('aria-expanded', 'false');
+  document.body.style.overflow = '';
+}
+function toggleMobile() {
+  burger.getAttribute('aria-expanded') === 'true' ? closeMobile() : openMobile();
+}
+
+burger.addEventListener('click', toggleMobile);
+overlay.addEventListener('click', closeMobile);
+document.addEventListener('keydown', e => { if (e.key === 'Escape') closeMobile(); });
+
+/* ══════════════════════════════════════════════
+   SMOOTH SCROLL — safe href="#" handling
+══════════════════════════════════════════════ */
+document.querySelectorAll('a[href^="#"]').forEach(a => {
+  a.addEventListener('click', e => {
+    const hash = a.getAttribute('href');
+    if (!hash || hash === '#') { e.preventDefault(); return; }
+    const target = document.querySelector(hash);
+    if (target) {
+      e.preventDefault();
+      closeMobile();
+      const offset = target.getBoundingClientRect().top + window.scrollY - 80;
+      window.scrollTo({ top: offset, behavior: 'smooth' });
+      // Update focus for accessibility
+      target.setAttribute('tabindex', '-1');
+      target.focus({ preventScroll: true });
+    }
+  });
+});
+
+/* Back to top */
+document.getElementById('back-top').addEventListener('click', () => {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+});
+
+/* ══════════════════════════════════════════════
+   FAQ ACCORDION — keyboard accessible
+══════════════════════════════════════════════ */
+function toggleFaq(el) {
+  const item = el.parentElement;
+  const isOpen = item.classList.contains('open');
+  document.querySelectorAll('.faq-item').forEach(i => {
+    i.classList.remove('open');
+    i.querySelector('.faq-question').setAttribute('aria-expanded', 'false');
+  });
+  if (!isOpen) {
+    item.classList.add('open');
+    el.setAttribute('aria-expanded', 'true');
+  }
+}
+
+/* ══════════════════════════════════════════════
+   SCROLL REVEAL — threshold 0.05 for reliability
+══════════════════════════════════════════════ */
+if ('IntersectionObserver' in window) {
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add('visible');
+        observer.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.05, rootMargin: '0px 0px -40px 0px' });
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+} else {
+  // Fallback: show all if IntersectionObserver not supported
+  document.querySelectorAll('.reveal').forEach(el => el.classList.add('visible'));
+}
+
+/* ══════════════════════════════════════════════
+   FORM VALIDATION — full client-side validation
+══════════════════════════════════════════════ */
+const form = document.getElementById('contactForm');
+
+function validateField(id, errId, condition, msg) {
+  const field = document.getElementById(id);
+  const err = document.getElementById(errId);
+  if (!condition(field)) {
+    field.classList.add('error');
+    err.textContent = msg;
+    err.classList.add('show');
+    return false;
+  }
+  field.classList.remove('error');
+  err.classList.remove('show');
+  return true;
+}
+
+// Live validation on blur
+document.getElementById('firstName').addEventListener('blur', () =>
+  validateField('firstName','firstNameErr', f => f.value.trim().length >= 2, 'Please enter your first name (at least 2 characters).'));
+document.getElementById('lastName').addEventListener('blur', () =>
+  validateField('lastName','lastNameErr', f => f.value.trim().length >= 2, 'Please enter your last name.'));
+document.getElementById('email').addEventListener('blur', () =>
+  validateField('email','emailErr', f => /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(f.value.trim()), 'Please enter a valid email address.'));
+document.getElementById('phone').addEventListener('blur', () => {
+  const p = document.getElementById('phone');
+  if (p.value.trim() === '') return; // optional
+  validateField('phone','phoneErr', f => /^[+]?[0-9\s\-]{7,15}$/.test(f.value.trim()), 'Please enter a valid phone number.');
+});
+document.getElementById('interest').addEventListener('blur', () =>
+  validateField('interest','interestErr', f => f.value !== '', 'Please select an option.'));
+document.getElementById('message').addEventListener('blur', () =>
+  validateField('message','messageErr', f => f.value.trim().length >= 20, 'Please write at least 20 characters.'));
+
+form.addEventListener('submit', e => {
+  e.preventDefault();
+
+  // Honeypot check
+  if (document.getElementById('hp_website').value !== '') {
+    console.warn('Bot submission blocked.');
+    return;
+  }
+
+  let valid = true;
+  valid = validateField('firstName','firstNameErr', f => f.value.trim().length >= 2, 'Please enter your first name.') && valid;
+  valid = validateField('lastName','lastNameErr', f => f.value.trim().length >= 2, 'Please enter your last name.') && valid;
+  valid = validateField('email','emailErr', f => /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(f.value.trim()), 'Please enter a valid email address.') && valid;
+  valid = validateField('interest','interestErr', f => f.value !== '', 'Please select an option.') && valid;
+  valid = validateField('message','messageErr', f => f.value.trim().length >= 20, 'Please write at least 20 characters.') && valid;
+
+  const phone = document.getElementById('phone');
+  if (phone.value.trim() !== '') {
+    valid = validateField('phone','phoneErr', f => /^[+]?[0-9\s\-]{7,15}$/.test(f.value.trim()), 'Please enter a valid phone number.') && valid;
+  }
+
+  if (!valid) {
+    // Focus the first error field
+    const firstError = form.querySelector('.error');
+    if (firstError) firstError.focus();
+    return;
+  }
+
+  const btn = document.getElementById('submitBtn');
+  btn.disabled = true;
+  btn.textContent = 'Sending…';
+
+  // Simulate async submission (replace with real fetch to your backend)
+  setTimeout(() => {
+    form.reset();
+    btn.textContent = 'Send Message →';
+    btn.disabled = false;
+    document.getElementById('formSuccess').style.display = 'block';
+    setTimeout(() => { document.getElementById('formSuccess').style.display = 'none'; }, 6000);
+  }, 1200);
+});
+
+/* ══════════════════════════════════════════════
+   COOKIE CONSENT (DPDPA 2023)
+══════════════════════════════════════════════ */
+function showCookieBanner() {
+  if (!localStorage.getItem('cw_cookie_consent')) {
+    setTimeout(() => document.getElementById('cookie-banner').classList.add('show'), 1500);
+  }
+}
+function acceptCookies() {
+  localStorage.setItem('cw_cookie_consent', 'accepted');
+  document.getElementById('cookie-banner').classList.remove('show');
+}
+function declineCookies() {
+  localStorage.setItem('cw_cookie_consent', 'essential');
+  document.getElementById('cookie-banner').classList.remove('show');
+}
+showCookieBanner();
+</script>
+</body>
+</html>
